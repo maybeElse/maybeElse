@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Ways of Being</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://unpkg.com/@panzoom/panzoom@4.4.3/dist/panzoom.min.js"></script>
     <link rel="stylesheet" href="parts/style.css">
     <link rel="stylesheet" href="parts/twemoji-amazing.css">
@@ -10,41 +10,50 @@
   </head>
   <body> 
     <div class="box spaced" style="position:relative;">
-      <div class="text-right titlebar">
-        <a href="./index.html" class="box button">X</a>
+      <div class="text-end titlebar">
+        <a href="./index.html" class="box button">&nbsp;X&nbsp;</a>
       </div>
       <div id="zoomIn" class="box spaced text-center zoomy" style="top:3em;"><b>+</b></div>
       <div id="zoomOut" class="box spaced text-center zoomy" style="top:6em;"><b>-</b></div>
       <div class="map">
         <img src="./images/ways of being v6@2x.png" id="panzoom-element" width="3200" height="1800"/>
       </div>
-      <br />
-      <p>
-        Available iterations:
-        <ul>
-          <li>
-            <a onclick="changeIteration(1)">1st</a>
+      <div class="text-center centered" style="margin-top:.25em;">
+        <div style="max-width:30em">
+          available iterations:
+        </div>
+        <ul class="list-group list-group-horizontal-sm" style="max-width:30em">
+          <li class="list-group-item flex-fill clear">
+            <ul class="list-group list-group-horizontal clear">
+              <li class="list-group-item flex-fill box" id="v1" onclick="changeIteration(1)">
+                1st
+              </li>
+              <li class="list-group-item flex-fill box" id="v2" onclick="changeIteration(2)">
+                2nd
+              </li>
+              <li class="list-group-item flex-fill box" id="v3" onclick="changeIteration(3)">
+                3rd
+              </li>
+            </ul>
           </li>
-          <li>
-            <a onclick="changeIteration(2)">2nd</a>
-          </li>
-          <li>
-            <a onclick="changeIteration(3)">3rd</a>
-          </li>
-          <li>
-            <a onclick="changeIteration(4)">4th</a>
-          </li>
-          <li>
-            <a onclick="changeIteration(5)">5th</a>
-          </li>
-          <li>
-            <a onclick="changeIteration(6)">6th</a>
+          <li class="list-group-item flex-fill clear">
+            <ul class="list-group list-group-horizontal clear">
+              <li class="list-group-item flex-fill box" id="v4" onclick="changeIteration(4)">
+                4th
+              </li>
+              <li class="list-group-item flex-fill box" id="v5" onclick="changeIteration(5)">
+                5th
+              </li>
+              <li class="list-group-item flex-fill box active" id="v6" onclick="changeIteration(6)">
+                6th
+              </li>
+            </ul>
           </li>
         </ul>
-      </p>
-      <p>
-        <a href="https://www.inprnt.com/gallery/maybeelse/">Buy a print?</a> <i class="twa twa-pleading-face"></i>
-      </p>
+        <div style="max-width:30em; margin-bottom:2em;">
+          <a href="https://www.inprnt.com/gallery/maybeelse/">Buy a print?</a> <i class="twa twa-pleading-face"></i>
+        </div>
+      </div>
     </div>
     <script>
       const elem = document.getElementById('panzoom-element')
@@ -59,14 +68,34 @@
       elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel)
     </script>
     <script>
+      function changeHighlight(x) {
+        var elems = document.getElementsByClassName("active");
+          [].forEach.call(elems, function(el) {el.classList.remove("active");
+        });
+        document.getElementById("v".concat(x)).classList.add("active");
+      }
+
       function changeIteration(x) {
         y = document.getElementById("panzoom-element");
-        if (x == 1) { y.src = "./images/ways of being v1.png"; }
-        else if (x == 2) { y.src = "./images/ways of being v2.png"; }
-        else if (x == 3) { y.src = "./images/ways of being v3.png"; }
-        else if (x == 4) { y.src = "./images/ways of being v4@2x.png"; }
-        else if (x == 5) { y.src = "./images/ways of being v5@2x.png"; }
-        else { y.src = "./images/ways of being v6@2x.png"; }
+        if (x == 1) {
+          y.src = "./images/ways of being v1.png";
+        }
+        else if (x == 2) { 
+          y.src = "./images/ways of being v2.png";
+        }
+        else if (x == 3) { 
+          y.src = "./images/ways of being v3.png"; 
+        }
+        else if (x == 4) { 
+          y.src = "./images/ways of being v4@2x.png"; 
+        }
+        else if (x == 5) { 
+          y.src = "./images/ways of being v5@2x.png"; 
+        }
+        else { 
+          y.src = "./images/ways of being v6@2x.png"; 
+        }
+        changeHighlight(x);
       }
     </script>
   </body>
