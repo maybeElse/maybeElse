@@ -16,6 +16,17 @@
     margin-right: 0em;
 }
 
+.zoomy {
+    position:absolute;
+    left: 1em;
+    z-index:10;
+    width:2em;
+}
+
+.box.zoomy:active {
+    border-color:  #A138A9 #F2DEE9 #F2DEE9 #A138A9;
+}
+
 .titlebar {
     padding: .2em 0em;
     margin-bottom:.25em;
