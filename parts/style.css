@@ -75,7 +75,7 @@ p {
 @media (min-width: 768px) {
     .centered {
         margin: auto;
-        width: 50%;
+        width: 30em;
     }
 }
 
