@@ -2,7 +2,59 @@
 <html>
   <head>
     <title>maybeElse.site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="parts/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-3 col-xs-1"></div>
+        <div class="box col-md-4 col-sm-6 col-xs-10 spaced limit-35em" id="mainBox">
+          <div class="text-right titlebar">
+            <a class="box button" onclick="hideAway()">X</a>
+          </div>
+          <p>
+            Hi,
+          </p>
+          <p>
+            I'm Else (as in the adjective or adverb), a queer creature who does various pointless things. Sometimes my writing makes people feel things.
+          </p>
+          <p>
+            If you're here for the map of ways of being, ⸢<a href="./waysofbeing.html">click this link</a>⸥
+          </p>
+          
+          <p>
+            Mostly I'm on twitter:
+            <ul>
+              <li>
+                <a href="http://twitter.com/maybeelse">@maybeElse</a>, where I post my microfiction, selfies, and other thoughts.
+              </li>
+              <li>
+                <a href="http://twitter.com/elsedoesart">@elseDoesArt</a>, where I post my artwork.
+              </li>
+              <li>
+                <a href="http://twitter.com/oft_decayed">@oft_decayed</a>, where I post stuff which would need heavy content warnings on main.
+              </li>
+            </ul>
+          </p>
+          <p>
+            I occasionally write ⸢<a href="https://write.as/maybeelse/">short stories</a>⸥
+          </p>
+          <p>
+            You can ⸢<a href="https://www.inprnt.com/gallery/maybeelse/">buy prints of my artwork</a>⸥<i class="twa twa-pleading-face"></i>
+          </p>
+          <p>
+            That's all.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function hideAway() {
+        var x = document.getElementById("mainBox");
+        x.style.display = "none";
+      }
+    </script>
   </body>
 </html>

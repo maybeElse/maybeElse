@@ -2,7 +2,35 @@
 <html>
   <head>
     <title>Ways of Being</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="https://unpkg.com/@panzoom/panzoom@4.4.3/dist/panzoom.min.js"></script>
+    <link rel="stylesheet" href="parts/style.css">
+    <link rel="stylesheet" href="parts/twemoji-amazing.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   </head>
-  <body>
+  <body> 
+    <div class="box spaced">
+      <div class="text-right titlebar">
+        <a href="./index.html" class="box button">X</a>
+      </div>
+      <div>
+        <img src="images\ways of being v6@4x.png" id="panzoom-element" class="map"/>
+      </div>
+    </div>
+    <script>
+      const elem = document.getElementById('panzoom-element')
+      const panzoom = Panzoom(elem, {
+        maxScale: 5,
+//        contain: 'outside',
+        startScale: 1.5
+      })
+      panzoom.pan(10, 10)
+      panzoom.zoom(2, { animate: true })
+
+      // Panning and pinch zooming are bound automatically (unless disablePan is true).
+      // There are several available methods for zooming
+      // that can be bound on button clicks or mousewheel.
+      elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel)
+    </script>
   </body>
 </html>

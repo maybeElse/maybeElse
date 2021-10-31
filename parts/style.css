@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('https://fonts.googleapis.com/css?family=Inconsolata');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.box {
+    background-color: #D8BCE3;
+    border: solid .2em;
+    border-color: #F2DEE9 #A138A9 #A138A9 #F2DEE9;
+    margin:.5em
+}
+
+.button {
+    margin-right: 0em;
+}
+
+.titlebar {
+    padding: .2em 0em;
+    margin-bottom:.25em;
+    background: rgb(132,31,220);
+    background: linear-gradient(90deg, rgba(132,31,220,1) 0%, rgba(216,188,227,1) 100%);
+}
+
+.spaced {
+    padding: .25em;
+}
+
+body {
+    font-family: 'Inconsolata';
+    background-color: #E4E5EA;
+    
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 0em .5em;
+}
+
+.map {
+    width:100%;
+    max-width: 160vh;
+    max-height: 90vh;
+}
+
+.limit-35em {
+    max-width:35em;
+}
