@@ -15,8 +15,8 @@
       </div>
       <div id="zoomIn" class="box spaced text-center zoomy" style="top:3em;"><b>+</b></div>
       <div id="zoomOut" class="box spaced text-center zoomy" style="top:6em;"><b>-</b></div>
-      <div>
-        <img src="./images/ways of being v6@2x.png" id="panzoom-element" class="map"/>
+      <div class="map">
+        <img src="./images/ways of being v6@2x.png" id="panzoom-element" width="3200" height="1800"/>
       </div>
       <br />
       <p>
@@ -49,17 +49,13 @@
     <script>
       const elem = document.getElementById('panzoom-element')
       const panzoom = Panzoom(elem, {
-        maxScale: 5,
+        maxScale: 4,
+        minScale: .25,
+        startScale: 1
       })
-      panzoom.pan(10, 10)
-      panzoom.zoom(2, { animate: true })
 
       document.getElementById("zoomIn").addEventListener('click', panzoom.zoomIn);
       document.getElementById("zoomOut").addEventListener('click', panzoom.zoomOut);
-
-      // Panning and pinch zooming are bound automatically (unless disablePan is true).
-      // There are several available methods for zooming
-      // that can be bound on button clicks or mousewheel.
       elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel)
     </script>
     <script>
