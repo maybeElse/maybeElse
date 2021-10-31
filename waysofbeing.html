@@ -14,8 +14,35 @@
         <a href="./index.html" class="box button">X</a>
       </div>
       <div>
-        <img src="images\ways of being v6@4x.png" id="panzoom-element" class="map"/>
+        <img src="./images/ways of being v6@2x.png" id="panzoom-element" class="map"/>
       </div>
+      <br />
+      <p>
+        Available iterations:
+        <ul>
+          <li>
+            <a onclick="changeIteration(1)">1st</a>
+          </li>
+          <li>
+            <a onclick="changeIteration(2)">2nd</a>
+          </li>
+          <li>
+            <a onclick="changeIteration(3)">3rd</a>
+          </li>
+          <li>
+            <a onclick="changeIteration(4)">4th</a>
+          </li>
+          <li>
+            <a onclick="changeIteration(5)">5th</a>
+          </li>
+          <li>
+            <a onclick="changeIteration(6)">6th</a>
+          </li>
+        </ul>
+      </p>
+      <p>
+        <a href="https://www.inprnt.com/gallery/maybeelse/">Buy a print?</a> <i class="twa twa-pleading-face"></i>
+      </p>
     </div>
     <script>
       const elem = document.getElementById('panzoom-element')
@@ -31,6 +58,17 @@
       // There are several available methods for zooming
       // that can be bound on button clicks or mousewheel.
       elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel)
+    </script>
+    <script>
+      function changeIteration(x) {
+        y = document.getElementById("panzoom-element");
+        if (x == 1) { y.src = "./images/ways of being v1.png"; }
+        else if (x == 2) { y.src = "./images/ways of being v2.png"; }
+        else if (x == 3) { y.src = "./images/ways of being v3.png"; }
+        else if (x == 4) { y.src = "./images/ways of being v4@2x.png"; }
+        else if (x == 5) { y.src = "./images/ways of being v5@2x.png"; }
+        else { y.src = "./images/ways of being v6@2x.png"; }
+      }
     </script>
   </body>
 </html>
