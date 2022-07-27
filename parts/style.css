@@ -1,16 +1,16 @@
 
 
 .box {
-    background-color: #D8BCE3;
+    background-color: #f1e7f5;
     border-style: solid;
     border-width: .2em!important;
-    border-color: #F2DEE9 #A138A9 #A138A9 #F2DEE9;
-    margin:.5em!important;
+    border-color: #FFFFFF #e2a5e7 #e2a5e7 #FFFFFF;
+    margin:.5em;
     border-radius:0%!important;
 }
 
 .button {
-    margin-right: 0em;
+    margin: 0px 1px;
     min-width:2em;
     text-decoration:none;
 }
@@ -20,8 +20,8 @@
 }
 
 .button:active, .box.active {
-    border-color:  #A138A9 #F2DEE9 #F2DEE9 #A138A9;
-    background-color: #BF9BDE;
+    border-color:  #e2a5e7 #FFFFFF #FFFFFF #e2a5e7;
+    background-color: #f1e7f5;
 }
 
 .zoomy {
@@ -37,9 +37,9 @@
 
 .titlebar {
     padding: .2em 0em;
-    margin-bottom:.25em;
+    margin: -4px -4px .25em;
     background: rgb(132,31,220);
-    background: linear-gradient(90deg, rgba(132,31,220,1) 0%, rgba(216,188,227,1) 100%);
+    background: linear-gradient(90deg, rgba(226,165,231,1) 0%, rgba(241,231,245,1) 100%);
 }
 
 .spaced {
